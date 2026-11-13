@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DINO RUNNER - 恐竜ランニングゲーム</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <!-- ゲーム描画キャンバス -->
+        <div id="canvas-container">
+            <canvas id="game-canvas"></canvas>
+
+            <!-- UIオーバーレイ -->
+            <div id="ui-overlay">
+                <!-- スコア表示 (HUD) -->
+                <div id="hud">
+                    <span id="high-score-display">HI 00000</span>
+                    <span id="current-score-display">00000</span>
+                </div>
+
+                <!-- タイトル画面 -->
+                <div id="title-screen" class="ui-screen active">
+                    <h1 class="game-title">DINO RUNNER</h1>
+                    <p class="instruction">SPACE / ↑ / クリック / タップ でスタート</p>
+                    <button id="start-button" class="game-btn">GAME START</button>
+                    <div class="controls-guide">
+                        <span>PC: Space / ↑ / クリック</span>
+                        <span>スマホ: 画面タップ</span>
+                    </div>
+                </div>
+
+                <!-- ゲームオーバー画面 -->
+                <div id="game-over-screen" class="ui-screen hidden">
+                    <h2 class="game-over-title">GAME OVER</h2>
+                    <div class="final-score-box">
+                        <p>SCORE: <span id="final-score">00000</span></p>
+                        <p id="new-record-badge" class="new-record hidden">★ NEW RECORD! ★</p>
+                    </div>
+                    <button id="retry-button" class="game-btn">RETRY</button>
+                    <p class="retry-instruction">SPACE または タップで再スタート</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- メインスクリプト (ES Modules) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
